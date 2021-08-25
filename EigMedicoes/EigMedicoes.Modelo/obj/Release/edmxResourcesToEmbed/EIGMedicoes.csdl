@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EIG_MEDIDORModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EIG_MEDIDOREntities" p1:LazyLoadingEnabled="true">
+    <FunctionImport Name="EIGMedicao_IMPORTAR_ARQUIVO_PARA_STAGE">
+      <Parameter Name="Arquivo" Mode="In" Type="String" />
+      <Parameter Name="RowCount" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="EIGMedicao_PROCESSAR_DADOS_IMPORTADOS">
+      <Parameter Name="RowCount" Mode="InOut" Type="Int32" />
+      <Parameter Name="FaltantesCount" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="EIGMedicao_View_Cadastro" EntityType="EIG_MEDIDORModel.EIGMedicao_View_Cadastro" />
+    <EntitySet Name="EIGMedicao_View_Medicoes" EntityType="EIG_MEDIDORModel.EIGMedicao_View_Medicoes" />
+    <FunctionImport Name="EIGMedicao_IMPORTAR_ARQUIVO2_PARA_STAGE">
+      <Parameter Name="Arquivo" Mode="In" Type="String" />
+      <Parameter Name="RowCount" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="EIGMedicao_Medicoes_Manuais" EntityType="EIG_MEDIDORModel.EIGMedicao_Medicoes_Manuais" />
+    <EntitySet Name="EIGMedicao_View_Agente" EntityType="EIG_MEDIDORModel.EIGMedicao_View_Agente" />
+    <EntitySet Name="EIGMedicao_MedicaoClientes" EntityType="EIG_MEDIDORModel.EIGMedicao_MedicaoClientes" />
+    <EntitySet Name="EIGMedicao_View_Contratos3" EntityType="EIG_MEDIDORModel.EIGMedicao_View_Contratos3" />
+    <EntitySet Name="EIG_Particionamento_ContratosEnergia" EntityType="EIG_MEDIDORModel.EIG_Particionamento_ContratosEnergia" />
+    <EntitySet Name="EIGMedicao_View_Contratos4" EntityType="EIG_MEDIDORModel.EIGMedicao_View_Contratos4" />
+    <EntitySet Name="EIGMedicao_View_Particionamento" EntityType="EIG_MEDIDORModel.EIGMedicao_View_Particionamento" />
+    <EntitySet Name="EIGMedicao_Import_Stage2" EntityType="EIG_MEDIDORModel.EIGMedicao_Import_Stage2" />
+  </EntityContainer>
+  <EntityType Name="EIGMedicao_View_Cadastro">
+    <Key>
+      <PropertyRef Name="Codigo_de_Cadastro" />
+    </Key>
+    <Property Type="Int32" Name="Codigo_de_Cadastro" Nullable="false" />
+    <Property Type="String" Name="Grupo" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Nome" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Tipo" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EIGMedicao_View_Medicoes">
+    <Key>
+      <PropertyRef Name="Ponto" />
+      <PropertyRef Name="Periodo" />
+      <PropertyRef Name="Consumo" />
+      <PropertyRef Name="Geracao" />
+      <PropertyRef Name="Consistido" />
+      <PropertyRef Name="Manual" />
+    </Key>
+    <Property Type="String" Name="Ponto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Periodo" Nullable="false" Precision="0" />
+    <Property Type="Decimal" Name="Consumo" Nullable="false" Precision="12" Scale="3" />
+    <Property Type="Decimal" Name="Geracao" Nullable="false" Precision="12" Scale="3" />
+    <Property Type="Boolean" Name="Consistido" Nullable="false" />
+    <Property Type="Boolean" Name="Manual" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EIGMedicao_Medicoes_Manuais">
+    <Key>
+      <PropertyRef Name="Ponto" />
+      <PropertyRef Name="Periodo" />
+    </Key>
+    <Property Type="String" Name="Ponto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Periodo" Nullable="false" Precision="0" />
+    <Property Type="Decimal" Name="Consumo" Nullable="false" Precision="12" Scale="3" />
+    <Property Type="Decimal" Name="Geracao" Nullable="false" Precision="12" Scale="3" />
+  </EntityType>
+  <EntityType Name="EIGMedicao_View_Agente">
+    <Key>
+      <PropertyRef Name="ID_Unidade" />
+      <PropertyRef Name="ID_Cadastro" />
+      <PropertyRef Name="Unidade" />
+    </Key>
+    <Property Type="Int32" Name="ID_Unidade" Nullable="false" />
+    <Property Type="Int32" Name="ID_Cadastro" Nullable="false" />
+    <Property Type="Int32" Name="CD_AGEN_SCDD" />
+    <Property Type="String" Name="SG_AGEN_SCDD" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Tipo" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Unidade" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Agente" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Fator_Perda" Precision="19" Scale="8" />
+  </EntityType>
+  <EntityType Name="EIGMedicao_MedicaoClientes">
+    <Key>
+      <PropertyRef Name="ID_Unidade" />
+      <PropertyRef Name="Inicio" />
+    </Key>
+    <Property Type="Int32" Name="ID_Unidade" Nullable="false" />
+    <Property Type="Int32" Name="ID_Cadastro" Nullable="false" />
+    <Property Type="DateTime" Name="Inicio" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="Fim" Nullable="false" Precision="3" />
+    <Property Type="Decimal" Name="MWh" Precision="18" Scale="8" />
+    <Property Type="Int32" Name="HorasFaltantes" Nullable="false" />
+    <Property Type="Boolean" Name="PossuiProjecao" Nullable="false" />
+    <Property Type="String" Name="SiglaAgente" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CD_AGEN_SCDD" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EIGMedicao_View_Contratos3">
+    <Key>
+      <PropertyRef Name="IDENTIFICACAO_UNIDADE" />
+      <PropertyRef Name="INICIO" />
+      <PropertyRef Name="FIM" />
+    </Key>
+    <Property Type="Int32" Name="ID_UNIDADE" />
+    <Property Type="String" Name="IDENTIFICACAO_UNIDADE" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="INICIO" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="FIM" Nullable="false" Precision="3" />
+    <Property Type="Decimal" Name="MONTANTE_CONTRATADO" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="FLEX_MIN_CONTRATADO" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="FLEX_MAX_CONTRATADO" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="MONTANTE_EXERCIDO" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="MONTANTE" Precision="38" Scale="6" />
+  </EntityType>
+  <EntityType Name="EIG_Particionamento_ContratosEnergia">
+    <Key>
+      <PropertyRef Name="ID_Unidade" />
+      <PropertyRef Name="Identificador" />
+      <PropertyRef Name="Inicio" />
+      <PropertyRef Name="Fim" />
+    </Key>
+    <Property Name="ID_Unidade" Type="Int32" Nullable="false" />
+    <Property Name="Identificador" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Inicio" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Fim" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Ponta" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Representatividade_Porcentagem" Type="Decimal" Precision="18" Scale="15" />
+    <Property Name="Representatividade_MWh" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Montante_Exercido" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Particionamento_Automatico" Type="Int32" />
+  </EntityType>
+  <EntityType Name="EIGMedicao_View_Contratos4">
+    <Key>
+      <PropertyRef Name="Identificador" />
+      <PropertyRef Name="IDENTIFICACAO_UNIDADE" />
+      <PropertyRef Name="INICIO" />
+      <PropertyRef Name="FIM" />
+      <PropertyRef Name="Flex_Min" />
+      <PropertyRef Name="Flex_Max" />
+      <PropertyRef Name="Proinfa" />
+      <PropertyRef Name="Prioridade_Proinfa" />
+    </Key>
+    <Property Name="ID_UNIDADE" Type="Int32" />
+    <Property Name="Identificador" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IDENTIFICACAO_UNIDADE" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="INICIO" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FIM" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PONTA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MONTANTE" Type="Decimal" Precision="29" Scale="6" />
+    <Property Name="REPRESENTATIVIDADE_MWH" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="REPRESENTATIVIDADE_PORCENTAGEM" Type="Decimal" Precision="18" Scale="15" />
+    <Property Name="Particionamento_Automatico" Type="Int32" />
+    <Property Name="HORAS" Type="Int32" />
+    <Property Name="Flex_Min" Type="Decimal" Nullable="false" Precision="18" Scale="8" />
+    <Property Name="Flex_Max" Type="Decimal" Nullable="false" Precision="18" Scale="8" />
+    <Property Name="Flex_Tipo" Type="Int32" />
+    <Property Name="Proinfa" Type="Boolean" Nullable="false" />
+    <Property Name="Prioridade_Proinfa" Type="Boolean" Nullable="false" />
+    <Property Name="MONTANTE_EXERCIDO" Type="Decimal" Precision="29" Scale="6" />
+  </EntityType>
+  <EntityType Name="EIGMedicao_View_Particionamento">
+    <Key>
+      <PropertyRef Name="Identificador" />
+      <PropertyRef Name="IDENTIFICACAO_UNIDADE" />
+      <PropertyRef Name="INICIO" />
+      <PropertyRef Name="FIM" />
+      <PropertyRef Name="MONTANTE" />
+      <PropertyRef Name="Flex_Min" />
+      <PropertyRef Name="Flex_Max" />
+      <PropertyRef Name="Proinfa" />
+      <PropertyRef Name="Prioridade_Proinfa" />
+    </Key>
+    <Property Name="ID_UNIDADE" Type="Int32" />
+    <Property Name="Identificador" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IDENTIFICACAO_UNIDADE" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="INICIO" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FIM" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PONTA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MONTANTE" Type="Decimal" Nullable="false" Precision="29" Scale="6" />
+    <Property Name="REPRESENTATIVIDADE_MWH" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="REPRESENTATIVIDADE_PORCENTAGEM" Type="Decimal" Precision="18" Scale="15" />
+    <Property Name="Particionamento_Automatico" Type="Int32" />
+    <Property Name="HORAS" Type="Int32" />
+    <Property Name="Flex_Min" Type="Decimal" Nullable="false" Precision="18" Scale="8" />
+    <Property Name="Flex_Max" Type="Decimal" Nullable="false" Precision="18" Scale="8" />
+    <Property Name="Flex_Tipo" Type="Int32" />
+    <Property Name="Proinfa" Type="Boolean" Nullable="false" />
+    <Property Name="Prioridade_Proinfa" Type="Boolean" Nullable="false" />
+    <Property Name="MONTANTE_EXERCIDO" Type="Decimal" Precision="29" Scale="6" />
+  </EntityType>
+  <EntityType Name="EIGMedicao_Import_Stage2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Agente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ponto___Grupo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Data" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Hora" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Energia_Ativa_De_Consumo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Energia_Ativa_De_Geração" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Qualidade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Origem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FC9C6FF-8D84-4CFD-B4DB-8CB0F68E89B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EigMedicoes.Modelo</RootNamespace>
+    <AssemblyName>EigMedicoes.Modelo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Utilities, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EFUtilities.1.0.2\lib\EntityFramework.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EIGMedicao_Import_Stage2.cs">
+      <DependentUpon>EIGMedicoes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EIGMedicao_MedicaoClientes.cs">
+      <DependentUpon>EIGMedicoes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EIGMedicao_Medicoes_Manuais.cs">
+      <DependentUpon>EIGMedicoes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EIGMedicao_View_Agente.cs">
+      <DependentUpon>EIGMedicoes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EIGMedicao_View_Cadastro.cs">
+      <DependentUpon>EIGMedicoes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EIGMedicao_View_Contratos3.cs">
+      <DependentUpon>EIGMedicoes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EIGMedicao_View_Contratos4.cs">
+      <DependentUpon>EIGMedicoes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EIGMedicao_View_Medicoes.cs">
+      <DependentUpon>EIGMedicoes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EIGMedicao_View_Particionamento.cs">
+      <DependentUpon>EIGMedicoes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EIGMedicoes.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EIGMedicoes.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EIGMedicoes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EIGMedicoes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EIGMedicoes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EIGMedicoes.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EIG_Particionamento_ContratosEnergia.cs">
+      <DependentUpon>EIGMedicoes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChart.Designer.cs">
+      <DependentUpon>FormChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChartContrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChartContrato.Designer.cs">
+      <DependentUpon>FormChartContrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraficoHtml.cs" />
+    <Compile Include="Mensagem.cs" />
+    <Compile Include="Modelo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="EIGMedicoes.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EIGMedicoes.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="EIGMedicoes.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EIGMedicoes.edmx</DependentUpon>
+      <LastGenOutput>EIGMedicoes.Context.cs</LastGenOutput>
+    </None>
+    <None Include="EIGMedicoes.edmx.diagram">
+      <DependentUpon>EIGMedicoes.edmx</DependentUpon>
+    </None>
+    <None Include="EIGMedicoes.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EIGMedicoes.edmx</DependentUpon>
+      <LastGenOutput>EIGMedicoes.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="db_scripts\createObjects.sql" />
+    <Content Include="topologia.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="topologia_nova.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormChart.resx">
+      <DependentUpon>FormChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChartContrato.resx">
+      <DependentUpon>FormChartContrato.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

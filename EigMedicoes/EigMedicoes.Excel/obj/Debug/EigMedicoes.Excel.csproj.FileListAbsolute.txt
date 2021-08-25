@@ -1,0 +1,16 @@
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\bin\Debug\topologia.json
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\bin\Debug\EigMedicoes.Excel.dll
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\bin\Debug\EigMedicoes.Excel.pdb
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\bin\Debug\EigMedicoes.Modelo.dll
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\bin\Debug\EntityFramework.dll
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\bin\Debug\Newtonsoft.Json.dll
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\bin\Debug\EigMedicoes.Modelo.pdb
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\bin\Debug\EigMedicoes.Modelo.dll.config
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\bin\Debug\EntityFramework.xml
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\bin\Debug\Newtonsoft.Json.xml
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\obj\Debug\EigMedicoes.Excel.csprojAssemblyReference.cache
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\obj\Debug\EigMedicoes.Excel.csproj.CoreCompileInputs.cache
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\obj\Debug\EigMedicoes.Excel.csproj.CopyComplete
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\obj\Debug\EigMedicoes.Excel.dll
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\obj\Debug\EigMedicoes.Excel.pdb
+C:\Development\eig\EigMedicoes\EigMedicoes.Excel\bin\Debug\EntityFramework.Utilities.dll

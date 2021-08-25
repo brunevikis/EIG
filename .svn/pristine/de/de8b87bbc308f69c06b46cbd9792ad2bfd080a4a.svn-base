@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3523EA76-DA67-45C0-98DC-07F6F9AE64CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EigMedicoes.Win</RootNamespace>
+    <AssemblyName>EigMedicoes.Win</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\compassdata\Depto%24\TI - Sistemas\PROD\EIG-Medidor\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <PublisherName>Compass</PublisherName>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>68</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0F6FF7FD84403C69A4FCF7D3CAD3987A8FE3759C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>EigMedicoes.Win_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlExtensions.cs" />
+    <Compile Include="views\FormConfirmaRateio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\FormConfirmaRateio.Designer.cs">
+      <DependentUpon>FormConfirmaRateio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\FormDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\FormDialog.Designer.cs">
+      <DependentUpon>FormDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\viewCadastroClienteAtivo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\viewCadastroClienteAtivo.Designer.cs">
+      <DependentUpon>viewCadastroClienteAtivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\FormBuscarCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\FormBuscarCadastro.Designer.cs">
+      <DependentUpon>FormBuscarCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="views\FormCadastroEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\FormCadastroEditor.Designer.cs">
+      <DependentUpon>FormCadastroEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\Interfaces.cs" />
+    <Compile Include="views\viewCadastroCliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\viewCadastroCliente.Designer.cs">
+      <DependentUpon>viewCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\viewCadastroRede.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\viewCadastroRede.Designer.cs">
+      <DependentUpon>viewCadastroRede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\viewCadastros.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\viewCadastros.Designer.cs">
+      <DependentUpon>viewCadastros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\viewContabilizacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\viewContabilizacao.Designer.cs">
+      <DependentUpon>viewContabilizacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\viewDados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\viewDados.Designer.cs">
+      <DependentUpon>viewDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\viewImportacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\viewImportacao.Designer.cs">
+      <DependentUpon>viewImportacao.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="views\FormConfirmaRateio.resx">
+      <DependentUpon>FormConfirmaRateio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\FormDialog.resx">
+      <DependentUpon>FormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\viewCadastroClienteAtivo.resx">
+      <DependentUpon>viewCadastroClienteAtivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\FormBuscarCadastro.resx">
+      <DependentUpon>FormBuscarCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="views\FormCadastroEditor.resx">
+      <DependentUpon>FormCadastroEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\viewCadastroCliente.resx">
+      <DependentUpon>viewCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\viewCadastroRede.resx">
+      <DependentUpon>viewCadastroRede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\viewCadastros.resx">
+      <DependentUpon>viewCadastros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\viewContabilizacao.resx">
+      <DependentUpon>viewContabilizacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\viewDados.resx">
+      <DependentUpon>viewDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\viewImportacao.resx">
+      <DependentUpon>viewImportacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="EigMedicoes.Win_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EigMedicoes.Excel\EigMedicoes.Excel.csproj">
+      <Project>{01b0597b-a0a8-417d-99c7-ddd7f1f77a48}</Project>
+      <Name>EigMedicoes.Excel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EigMedicoes.Modelo\EigMedicoes.Modelo.csproj">
+      <Project>{4fc9c6ff-8d84-4cfd-b4db-8cb0f68e89b6}</Project>
+      <Name>EigMedicoes.Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="error.png" />
+    <None Include="ajax-loader.gif" />
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

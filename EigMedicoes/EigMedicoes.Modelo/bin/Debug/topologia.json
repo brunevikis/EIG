@@ -1,0 +1,1122 @@
+{
+  "Redes": [
+    {
+      "Nome": "SE MOSSORO II",
+      "Medidores": [
+        "RNMSD-C1C2T11"
+      ],
+      "Descendentes": [
+        {
+          "Nome": "SE CARCARA II",
+          "Medidores": [
+            "RNCAD-ECCT112",
+            "RNCAD-ECCT213"
+          ],
+          "Descendentes": [
+            {
+              "Nome": "TERRAL",
+              "Ativo": "G",
+              "CodigoCadastro": 1678,
+              "SiglaAgente": "TERRAL",
+              "Medidores": [
+                "RNCAD-TRRL108",
+                "RNCAD-TRRL209",
+                "RNCAD-TRRL310"
+              ]
+            },
+            {
+              "Nome": "CARCARA I",
+              "Ativo": "G",
+              "CodigoCadastro": 1698,
+              "SiglaAgente": "CARCARA I",
+              "Medidores": [
+                "RNCAD-ECAU105",
+                "RNCAD-ECAU206",
+                "RNCAD-ECAU307"
+              ]
+            },
+            {
+              "Nome": "CARCARA II",
+              "Ativo": "G",
+              "CodigoCadastro": 1697,
+              "SiglaAgente": "CARCARA II",
+              "Medidores": [
+                "RNCAD-ECAD101",
+                "RNCAD-ECAD202",
+                "RNCAD-ECAD303",
+                "RNCAD-ECAD404"
+              ]
+            }
+          ]
+        },
+        {
+          "Nome": "SE VAMCRUZ",
+          "Medidores": [
+            "RNCAD-JUCAI11"
+          ],
+          "Descendentes": [
+            {
+              "Nome": "SE AMAZONAS I",
+              "Medidores": [
+                "RNAMZNTRT1-10"
+              ],
+              "Descendentes": [
+                {
+                  "Nome": "JUNCO I",
+                  "Ativo": "G",
+                  "CodigoCadastro": 1687,
+                  "SiglaAgente": "EOL JUNCO I",
+                  "Medidores": [
+                    "RNAMZNEJUC101"
+                  ]
+                },
+                {
+                  "Nome": "JUNCO II",
+                  "Ativo": "G",
+                  "CodigoCadastro": 1688,
+                  "SiglaAgente": "EOL JUNCO II",
+                  "Medidores": [
+                    "RNAMZNEJUC202"
+                  ]
+                },
+                {
+                  "Nome": "CAIÇARA I",
+                  "Ativo": "G",
+                  "CodigoCadastro": 1685,
+                  "SiglaAgente": "EOL CAICARA I",
+                  "Medidores": [
+                    "RNAMZNECAI103"
+                  ]
+                },
+                {
+                  "Nome": "CAIÇARA II",
+                  "Ativo": "G",
+                  "CodigoCadastro": 1686,
+                  "SiglaAgente": "EOL CAICARA II",
+                  "Medidores": [
+                    "RNAMZNECAI204"
+                  ]
+                }
+              ]
+            },
+            {
+              "Nome": "SE AMAZONAS II",
+              "Medidores": [
+                "RNAMZNTRT2-09"
+              ],
+              "Descendentes": [
+                {
+                  "Nome": "EOL VILA PARA I",
+                  "Ativo": "G",
+                  "CodigoCadastro": 1772,
+                  "Medidores": [
+                    "RNAMZNEVPA105"
+                  ]
+                },
+                {
+                  "Nome": "EOL VILA PARA II",
+                  "Ativo": "G",
+                  "CodigoCadastro": 1773,
+                  "SiglaAgente": "EOL VILA PARA II",
+                  "Medidores": [
+                    "RNAMZNEVPA206"
+                  ]
+                },
+                {
+                  "Nome": "EOL VILA PARA III",
+                  "Ativo": "G",
+                  "CodigoCadastro": 1774,
+                  "SiglaAgente": "EOL VILA PARA III",
+                  "Medidores": [
+                    "RNAMZNEVPA307"
+                  ]
+                },
+                {
+                  "Nome": "EOL VILA AMAZONAS V",
+                  "Ativo": "G",
+                  "CodigoCadastro": 1775,
+                  "SiglaAgente": "EOL VILA AMAZONAS V",
+                  "Medidores": [
+                    "RNAMZNEVAMV08"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Nome": "SE IRECE",
+      "Medidores": [
+        "BAIRE-CEASR07"
+      ],
+      "Descendentes": [
+        {
+          "Nome": "ASSURUA II",
+          "Ativo": "G",
+          "CodigoCadastro": 1762,
+          "SiglaAgente": "ASSURUA II",
+          "Medidores": [
+            "BAGOI-EASR201"
+          ]
+        },
+        {
+          "Nome": "ASSURUA V",
+          "Ativo": "G",
+          "CodigoCadastro": 1746,
+          "SiglaAgente": "ASSURUA V",
+          "Medidores": [
+            "BAGOI-EASR502"
+          ]
+        },
+        {
+          "Nome": "ASSURUA VII",
+          "Ativo": "G",
+          "CodigoCadastro": 1747,
+          "SiglaAgente": "ASSURUA VII",
+          "Medidores": [
+            "BAGOI-EASR703"
+          ]
+        }
+      ]
+    },
+    {
+      "Nome": "ECTX BOTUCATU",
+      "Ativo": "C",
+      "CodigoCadastro": 1592,
+      "SiglaAgente": "ECTX",
+      "Medidores": [
+        "SPEUBOENTR-01"
+      ]
+    },
+    {
+      "Nome": "ECTX SALTO",
+      "Ativo": "C",
+      "CodigoCadastro": 1591,
+      "SiglaAgente": "ECTX",
+      "Medidores": [
+        "SPEUCAENTR-01",
+        "SPEUCAENTR-02"
+      ]
+    },
+    {
+      "Nome": "PCH CHUPINGUAIA",
+      "Ativo": "G",
+      "CodigoCadastro": [
+        0.95,
+        1673,
+        0.05,
+        1643
+      ],
+      "SiglaAgente": "PCH CHUPINGUAIA",
+      "AgruparConsumoGeracao": true,
+      "Medidores": [
+        "ROCHPGUSINA01"
+      ]
+    },
+    {
+      "Nome": "CIDADE JARDIM",
+      "Ativo": "C",
+      "CodigoCadastro": 343,
+      "SiglaAgente": "CIDADE JARDIM",
+      "Medidores": [
+        "SPSCJ-ENTR101"
+      ]
+    },
+    {
+      "Nome": "HORTO B VISTA",
+      "Ativo": "C",
+      "CodigoCadastro": 1639,
+      "SiglaAgente": "HORTO B VISTA",
+      "Medidores": [
+        "BASHBVENTR101"
+      ]
+    },
+    {
+      "Nome": "OUTLET CATARINA",
+      "Ativo": "C",
+      "CodigoCadastro": 1656,
+      "SiglaAgente": "OUTLET CATARINA",
+      "Medidores": [
+        "SPVCSHENTR101"
+      ]
+    },
+    {
+      "Nome": "SHOP M TUCURUVI",
+      "Ativo": "C",
+      "CodigoCadastro": 1610,
+      "SiglaAgente": "SHOP M TUCURUV",
+      "Medidores": [
+        "SPSMTTENTR101"
+      ]
+    },
+    {
+      "Nome": "SHOPPING PONTA NEGRA",
+      "Ativo": "C",
+      "CodigoCadastro": 1769,
+      "SiglaAgente": "SHOPPING PONTA NEGRA",
+      "Medidores": [
+        "AMSHPGENTR101"
+      ]
+    },
+    {
+      "Nome": "SE PEDRA DO REINO",
+      "Ativo": "G",
+      "Medidores": [
+        "BASLU-GTOT-01"
+      ],
+      "Descendentes": [
+        {
+          "Nome": "EOL PEDRA DO REINO I",
+          "Ativo": "G",
+          "SiglaAgente": "EOPR",
+          "Medidores": [
+            "BAEOPRUEPR-01"
+          ]
+        },
+        {
+          "Nome": "EOL PEDRA DO REINO III",
+          "Ativo": "G",
+          "SiglaAgente": "GESTAMP",
+          "Medidores": [
+            "BAEOPRUEPR302"
+          ]
+        }
+      ]
+    },
+    {
+      "Nome": "SE JOAO CAMARA",
+      "Ativo": "G",
+      "Medidores": [
+        "RNJCM-GTOT-01"
+      ],
+      "Descendentes": [
+        {
+          "Nome": "CABEÇO PRETO I",
+          "Ativo": "G",
+          "SiglaAgente": "GEOBV",
+          "Medidores": [
+            "RNCBP-ECBP-01"
+          ]
+        },
+        {
+          "Nome": "CABEÇO PRETO IV",
+          "Ativo": "G",
+          "SiglaAgente": "GESTAMP MOXOTO",
+          "Medidores": [
+            "RNCBP-ECBP402"
+          ]
+        }
+      ]
+    },
+    {
+      "Nome": "SE SERRA DE SANTANA III",
+      "Ativo": "G",
+      "Medidores": [
+        "RNLND-PLSS305"
+      ],
+      "Descendentes": [
+        {
+          "Nome": "EOL PELADO",
+          "Ativo": "G",
+          "CodigoCadastro": 1753,
+          "SiglaAgente": "PARAISO",
+          "Medidores": [
+            "RNSST3EOPLD01"
+          ]
+        },
+        {
+          "Nome": "EOL SERRA SANTANA III",
+          "Ativo": "G",
+          "CodigoCadastro": 1757,
+          "SiglaAgente": "GESTAMP SERIDO",
+          "Medidores": [
+            "RNSST3SST3-02"
+          ]
+        },
+        {
+          "Nome": "EOL MACAMBIRA II",
+          "Ativo": "G",
+          "CodigoCadastro": 1709,
+          "SiglaAgente": "MACAMBIRA II",
+          "Medidores": [
+            "RNSST3EMB2-03"
+          ]
+        }
+      ]
+    },
+    {
+      "Nome": "SE SERRA DE SANTANA I E II",
+      "Ativo": "G",
+      "Medidores": [
+        "RNLND-LNSUD06"
+      ],
+      "Descendentes": [
+        {
+          "Nome": "EOL LANCHINHA",
+          "Ativo": "G",
+          "CodigoCadastro": 1754,
+          "SiglaAgente": "LANCHINHA",
+          "Medidores": [
+            "RNULNCEOLNC01"
+          ]
+        },
+        {
+          "Nome": "EOL SERRA SANTANA I",
+          "Ativo": "G",
+          "CodigoCadastro": 1756,
+          "SiglaAgente": "GESTAMP SANTAN",
+          "Medidores": [
+            "RNSS2-ESS1-01"
+          ]
+        },
+        {
+          "Nome": "EOL SERRA SANTANA II",
+          "Ativo": "G",
+          "CodigoCadastro": 1755,
+          "SiglaAgente": "GESTAMP LAGOA",
+          "Medidores": [
+            "RNSS2-ESS2-02"
+          ]
+        },
+        {
+          "Nome": "EOL MACAMBIRA I",
+          "Ativo": "G",
+          "CodigoCadastro": 1708,
+          "SiglaAgente": "MACAMBIRA I",
+          "Medidores": [
+            "RNSS2-EMB1-03"
+          ]
+        }
+      ]
+    },
+    {
+      "Nome": "CANABRAVA",
+      "Ativo": "G",
+      "CodigoCadastro": 37,
+      "SiglaAgente": "CANABRAVA",
+      "Medidores": [
+        "RJSECJUTCB-01"
+      ]
+    },
+    {
+      "Nome": "UTE SVA",
+      "Ativo": "G",
+      "CodigoCadastro": 1665,
+      "SiglaAgente": "UTE SVA",
+      "Medidores": [
+        "RSALE4UGEEA01"
+      ]
+    },
+    {
+      "Nome": "UTE ENGENHO CORADINI",
+      "Ativo": "G",
+      "CodigoCadastro": 1744,
+      "SiglaAgente": "UTE ENGENHO CORADINI",
+      "Medidores": [
+        "RSYECDUECD-01"
+      ]
+    },
+    {
+      "Nome": "LOGOPLASTE",
+      "Ativo": "C",
+      "CodigoCadastro": 1609,
+      "SiglaAgente": "LOGOPLASTE",
+      "Medidores": [
+        "SPLPARENTR101"
+      ]
+    },
+    {
+      "Nome": "METRO-RIO",
+      "Ativo": "C",
+      "CodigoCadastro": 997,
+      "SiglaAgente": "METRO-RIO",
+      "Medidores": [
+        "RJBOT-ENTR101",
+        "RJBOT-ENTR202",
+        "RJCOL-ENTR101",
+        "RJCOL-ENTR202",
+        "RJFCA-ENTR101",
+        "RJFCA-ENTR202",
+        "RJMTBRENTR101",
+        "RJMTBRENTR202"
+      ],
+      "Descendentes": [
+        {
+          "Nome": "BOTAFOGO",
+          "Ativo": "C",
+          "Medidores": [
+            "RJBOT-ENTR101",
+            "RJBOT-ENTR202"
+          ]
+        },
+        {
+          "Nome": "COLÉGIO",
+          "Ativo": "C",
+          "Medidores": [
+            "RJCOL-ENTR101",
+            "RJCOL-ENTR202"
+          ]
+        },
+        {
+          "Nome": "FREI CANECA",
+          "Ativo": "C",
+          "Medidores": [
+            "RJFCA-ENTR101",
+            "RJFCA-ENTR202"
+          ]
+        },
+        {
+          "Nome": "SÃO CONRADO",
+          "Ativo": "C",
+          "Medidores": [
+            "RJMTBRENTR101",
+            "RJMTBRENTR202"
+          ]
+        }
+      ]
+    },
+    {
+      "Nome": "MULTIVERDE",
+      "Ativo": "C",
+      "CodigoCadastro": 1667,
+      "SiglaAgente": "MULTIVERDE",
+      "Medidores": [
+        "SPMTVDENTR101"
+      ]
+    },
+    {
+      "Nome": "CARTA FABRIL CL",
+      "Ativo": "C",
+      "CodigoCadastro": 1768,
+      "SiglaAgente": "CARTA FABRIL CL",
+      "Medidores": [
+        "GOCGOPENTR101"
+      ]
+    },
+    {
+      "Nome": "CARTA FABRIL",
+      "Ativo": "C",
+      "CodigoCadastro": 1111,
+      "SiglaAgente": "CARTA FABRIL CL",
+      "Medidores": [
+        "RJCGPAENTR-01"
+      ]
+    },
+    {
+      "Nome": "CARTONALE",
+      "Ativo": "C",
+      "CodigoCadastro": 1765,
+      "SiglaAgente": "CARTONALE",
+      "Medidores": [
+        "SPCTNPENTR101"
+      ]
+    },
+    {
+      "Nome": "ECTX QUIMICA",
+      "Ativo": "C",
+      "CodigoCadastro": 1789,
+      "SiglaAgente": "ECTX",
+      "Medidores": [
+        "SPECTSENTR101",
+        ""
+      ]
+    },
+    {
+      "Nome": "SL ALIMENTOS",
+      "Ativo": "C",
+      "CodigoCadastro": 1727,
+      "SiglaAgente": "SL PARTICIPAÇÕES",
+      "Medidores": [
+        "PRSLMSENTR101"
+      ]
+    },
+    {
+      "Nome": "SL SEMENTES",
+      "Ativo": "C",
+      "CodigoCadastro": 1732,
+      "SiglaAgente": "SL PARTICIPAÇÕES",
+      "Medidores": [
+        "PRSMPMENTR101"
+      ]
+    },
+    {
+      "Nome": "MAKSOUD",
+      "Ativo": "C",
+      "CodigoCadastro": 1733,
+      "SiglaAgente": "MAKSOUD",
+      "Medidores": [
+        "SPHMPZENTR101"
+      ]
+    },
+    {
+      "Nome": "GRU",
+      "Ativo": "C",
+      "CodigoCadastro": 1739,
+      "SiglaAgente": "GRU",
+      "Medidores": [
+        "SPAGU-ENTR101",
+        "SPAGU-ENTR202"
+      ]
+    },
+    {
+      "Nome": "Adoro Rio Claro",
+      "Ativo": "C",
+      "CodigoCadastro": 1740,
+      "SiglaAgente": "Adoro",
+      "Medidores": [
+        "SPADCLENTR101"
+      ]
+    },
+    {
+      "Nome": "SARPAV",
+      "Ativo": "C",
+      "CodigoCadastro": 1736,
+      "SiglaAgente": "SARPAV",
+      "Medidores": [
+        "SPSVBUENTR101"
+      ]
+    },
+    {
+      "Nome": "FASANO",
+      "Ativo": "C",
+      "CodigoCadastro": 1726,
+      "SiglaAgente": "FASANO",
+      "Medidores": [
+        "SPHMCIENTR101",
+        ""
+      ]
+    },
+    {
+      "Nome": "SE JOAO CAMARA III",
+      "Ativo": "G",
+      "Medidores": [
+        "RNJCT-CP35617"
+      ],
+      "Descendentes": [
+        {
+          "Nome": "EOL CABEÇO PRETO III",
+          "Ativo": "G",
+          "SiglaAgente": "AGRESTE",
+          "Medidores": [
+            "RNCBP2ECBP302"
+          ]
+        },
+        {
+          "Nome": "EOL CABEÇO PRETO V",
+          "Ativo": "G",
+          "SiglaAgente": "JARDINS",
+          "Medidores": [
+            "RNCBP2ECBP501"
+          ]
+        },
+        {
+          "Nome": "EOL CABEÇO PRETO VI",
+          "Ativo": "G",
+          "SiglaAgente": "ALVORADA I",
+          "Medidores": [
+            "RNCBP2ECBP603"
+          ]
+        }
+      ]
+    },
+    {
+      "Nome": "IGUASPORT Vila Velha",
+      "Ativo": "C",
+      "CodigoCadastro": 1797,
+      "SiglaAgente": "Vila Velha",
+      "Medidores": [
+        "ESISVVENTR101"
+      ]
+    },
+    {
+      "Nome": "TIVOLI",
+      "Ativo": "C",
+      "CodigoCadastro": 1798,
+      "SiglaAgente": "TIVOLI",
+      "Medidores": [
+        "SPTVSHALCND01"
+      ]
+    },
+    {
+      "Nome": "Iguasport Sorocaba",
+      "Ativo": "C",
+      "CodigoCadastro": 1797,
+      "SiglaAgente": "Iguasport Sorocaba",
+      "Medidores": [
+        "SPIGSOENTR101"
+      ]
+    },
+    {
+      "Nome": "Aguas de Guariroba",
+      "Ativo": "C",
+      "CodigoCadastro": 1730,
+      "SiglaAgente": "Aguas de Guariroba",
+      "Medidores": [
+        "MSAGUCENTR101"
+      ]
+    },
+    {
+      "Nome": "Adoro São Carlos",
+      "Ativo": "C",
+      "SiglaAgente": "Adoro São Carlos",
+      "Medidores": [
+        "SPADSCENTR101"
+      ]
+    },
+    {
+      "Nome": "Adoro Várzea Paulista",
+      "Ativo": "C",
+      "SiglaAgente": "Adoro Várzea Paulista",
+      "Medidores": [
+        "SPADVPENTR101"
+      ]
+    }
+  ],
+  "Clientes": [
+    {
+      "Cliente": "VOLTALIA",
+      "Emails": [
+        "n.rodrigues@voltalia.com",
+        "k.monnerat@voltalia.com",
+        "c.dias@voltalia.com",
+        "c.nunes@voltalia.com"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "TERRAL",
+        "CARCARA I",
+        "CARCARA II",
+        "JUNCO I",
+        "JUNCO II",
+        "CAIÇARA I",
+        "CAIÇARA II",
+        "EOL VILA PARA I",
+        "EOL VILA PARA II",
+        "EOL VILA PARA III",
+        "EOL VILA AMAZONAS V"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "JURUENA",
+      "Emails": [
+        "elima@e4u.net.br",
+        "nir.abramson@e4u.net.br"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br",
+        ""
+      ],
+      "Ativos": [
+        "PCH CHUPINGUAIA"
+      ],
+      "IncluirGrafico": true
+    },
+    {
+      "Cliente": "EUCATEX",
+      "Emails": [
+        "daniel.russo@cpas.com.br"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "ECTX SALTO",
+        "ECTX BOTUCATU"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "JHSF",
+      "Emails": [
+        "sergioneves@jhsf.com.br",
+        "andrepestana@jhsf.com.br"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "CIDADE JARDIM",
+        "OUTLET CATARINA",
+        "SHOP M TUCURUVI",
+        "SHOPPING PONTA NEGRA",
+        "HORTO B VISTA"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "CANABRAVA",
+      "Emails": [
+        "fabio.salles@usinacanabrava.com.br",
+        "antoniomelloesouza@usinacanabrava.com.br",
+        "financeiro@usinacanabrava.com.br"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "CANABRAVA"
+      ],
+      "IncluirGrafico": true
+    },
+    {
+      "Cliente": "CER",
+      "Emails": [
+        "jessica@cer-energia.com.br"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "ASSURUA II",
+        "ASSURUA V",
+        "ASSURUA VII"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "LOGOPLASTE",
+      "Emails": [
+        "daniel.russo@cpas.com.br"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "LOGOPLASTE"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "METRO-RIO",
+      "Emails": [
+        "ymoura@metrorio.com.br",
+        "mbaptista@metrorio.com.br"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "BOTAFOGO",
+        "COLÉGIO",
+        "FREI CANECA",
+        "SÃO CONRADO",
+        "METRO-RIO"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "MULTIVERDE",
+      "Emails": [
+        "jefferson.padua@mvpapeis.com.br"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "MULTIVERDE"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "CARTA FABRIL",
+      "Emails": [
+        "katiamonnerat@hotmail.com"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "CARTA FABRIL",
+        "CARTA FABRIL CL"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "CARTONALE",
+      "Emails": [],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "CARTONALE"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "GESTAMP - PEDRA",
+      "Emails": [
+        "anderson.penha@gestampren.com",
+        "naielly.almeida@gestampren.com",
+        "egmolina@gestampren.com",
+        "adrian.fernandez@gestampren.com"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "EOL PEDRA DO REINO I",
+        "EOL PEDRA DO REINO III",
+        "SE PEDRA DO REINO"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "GESTAMP - CABEÇO",
+      "Emails": [
+        "anderson.penha@gestampren.com",
+        "naielly.almeida@gestampren.com",
+        "egmolina@gestampren.com",
+        "adrian.fernandez@gestampren.com"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "CABEÇO PRETO I",
+        "CABEÇO PRETO IV",
+        "SE JOAO CAMARA"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "GESTAMP - SUBESTAÇÃO SERRA DE SANTANA 1 e 2",
+      "Emails": [
+        "anderson.penha@gestampren.com",
+        "naielly.almeida@gestampren.com",
+        "egmolina@gestampren.com",
+        "adrian.fernandez@gestampren.com"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "EOL SERRA SANTANA I",
+        "EOL SERRA SANTANA II",
+        "EOL MACAMBIRA I",
+        "EOL LANCHINHA",
+        "SE SERRA DE SANTANA I E II"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "GESTAMP - PARAISO",
+      "Emails": [
+        "anderson.penha@gestampren.com",
+        "naielly.almeida@gestampren.com",
+        "egmolina@gestampren.com",
+        "adrian.fernandez@gestampren.com"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "EOL SERRA SANTANA III",
+        "EOL PELADO",
+        "EOL MACAMBIRA II",
+        "SE SERRA DE SANTANA III"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "CORADINI",
+      "Emails": [
+        "energia@coradini.com.br"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br",
+        ""
+      ],
+      "Ativos": [
+        "UTE ENGENHO CORADINI"
+      ],
+      "IncluirGrafico": true
+    },
+    {
+      "Cliente": "UTE SVA",
+      "Emails": [
+        "leandros@pilecconobre.com.br",
+        " fabiop@pilecconobre.com.br",
+        " lucasm@pilecconobre.com.br"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "UTE SVA"
+      ],
+      "IncluirGrafico": true
+    },
+    {
+      "Cliente": "SL PARTICIPAÇÕES",
+      "Emails": [
+        "rafael.borges@slpart.com.br",
+        "robertamv@slpart.com.br",
+        "santiago@slpart.com.br",
+        "thomaz@slpart.com.br",
+        "laerte@slpart.com.br",
+        "eloisa@slpart.com.br",
+        "tiberio@slpart.com.br",
+        ""
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "SL ALIMENTOS",
+        "SL SEMENTES"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "MAKSOUD",
+      "Emails": [
+        "a.magalhaes@maksoud.com.br",
+        "j.sampaio@maksoud.com.br",
+        "o.golin@maksoud.com.br",
+        ""
+      ],
+      "CCEmails": [
+        "BACKOFFICE@EEIG.COM.BR"
+      ],
+      "Ativos": [
+        "MAKSOUD"
+      ],
+      "IncluirGrafico": true
+    },
+    {
+      "Cliente": "GRU",
+      "Emails": [
+        "victor.duarte@gru.com.br",
+        "Walter.Lopes@gru.com.br",
+        "Manoel.silva@gru.com.br",
+        "Vinicius.Lima@gru.com.br",
+        "Marcelo.Perides@gru.com.br"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "GRU"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "Adoro",
+      "Emails": [
+        "marcio@adoro.com.br",
+        "luiz.bonetto@adoro.com.br",
+        "reginaldo@adoro.com.br",
+        "rosangela@adoro.com.br",
+        "eduardo.fiorini@adoro.com.br"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "Adoro Rio Claro",
+        "Adoro São Carlos",
+        "Adoro Várzea Paulista"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "SARPAV",
+      "Emails": [
+        "dan.ramon@aegea.com.br",
+        "luciano.silva@equipavmineracao.com.br",
+        ""
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "SARPAV"
+      ],
+      "IncluirGrafico": true
+    },
+    {
+      "Cliente": "FASANO",
+      "Emails": [
+        "ivone.portela@fasano.com.br",
+        "leo.ribeiro@fasano.com.br",
+        "ezequiel.paiva@fasano.com.br"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "FASANO"
+      ],
+      "IncluirGrafico": true
+    },
+    {
+      "Cliente": "GESTAMP - JOAO CAMARA III",
+      "Emails": [
+        "anderson.penha@gestampren.com",
+        "naielly.almeida@gestampren.com",
+        "egmolina@gestampren.com",
+        "adrian.fernandez@gestampren.com"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "SE JOAO CAMARA III",
+        "EOL CABEÇO PRETO III",
+        "EOL CABEÇO PRETO V",
+        "EOL CABEÇO PRETO VI"
+      ],
+      "IncluirGrafico": false
+    },
+    {
+      "Cliente": "IGUASPORT",
+      "Emails": [
+        "dionizio.camargo@decathlon.com",
+        "",
+        "renato.takacs@decathlon.com",
+        "",
+        ""
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "IGUASPORT Vila Velha",
+        "Iguasport Sorocaba"
+      ],
+      "IncluirGrafico": true
+    },
+    {
+      "Cliente": "TIVOLI",
+      "Emails": [
+        "gustavo@tivolishopping.com.br"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "TIVOLI"
+      ],
+      "IncluirGrafico": true
+    },
+    {
+      "Cliente": "Aguas de Guariroba",
+      "Emails": [
+        "samuel.silva@aguasguariroba.com.br",
+        "dan.ramon@aegea.com.br"
+      ],
+      "CCEmails": [
+        "backoffice@eeig.com.br"
+      ],
+      "Ativos": [
+        "Aguas de Guariroba"
+      ],
+      "IncluirGrafico": true
+    }
+  ]
+}

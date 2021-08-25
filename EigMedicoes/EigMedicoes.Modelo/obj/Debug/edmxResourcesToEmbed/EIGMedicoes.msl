@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EIG_MEDIDORModelStoreContainer" CdmEntityContainer="EIG_MEDIDOREntities">
+    <FunctionImportMapping FunctionImportName="EIGMedicao_IMPORTAR_ARQUIVO_PARA_STAGE" FunctionName="EIG_MEDIDORModel.Store.EIGMedicao_IMPORTAR_ARQUIVO_PARA_STAGE" />
+    <FunctionImportMapping FunctionImportName="EIGMedicao_PROCESSAR_DADOS_IMPORTADOS" FunctionName="EIG_MEDIDORModel.Store.EIGMedicao_PROCESSAR_DADOS_IMPORTADOS" />
+    <EntitySetMapping Name="EIGMedicao_View_Cadastro">
+      <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_View_Cadastro">
+        <MappingFragment StoreEntitySet="EIGMedicao_View_Cadastro">
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+          <ScalarProperty Name="Codigo_de_Cadastro" ColumnName="Codigo de Cadastro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EIGMedicao_View_Medicoes">
+      <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_View_Medicoes">
+        <MappingFragment StoreEntitySet="EIGMedicao_View_Medicoes">
+          <ScalarProperty Name="Manual" ColumnName="Manual" />
+          <ScalarProperty Name="Consistido" ColumnName="Consistido" />
+          <ScalarProperty Name="Geracao" ColumnName="Geracao" />
+          <ScalarProperty Name="Consumo" ColumnName="Consumo" />
+          <ScalarProperty Name="Periodo" ColumnName="Periodo" />
+          <ScalarProperty Name="Ponto" ColumnName="Ponto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="EIGMedicao_IMPORTAR_ARQUIVO2_PARA_STAGE" FunctionName="EIG_MEDIDORModel.Store.EIGMedicao_IMPORTAR_ARQUIVO2_PARA_STAGE" />
+    <EntitySetMapping Name="EIGMedicao_Medicoes_Manuais">
+      <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_Medicoes_Manuais">
+        <MappingFragment StoreEntitySet="EIGMedicao_Medicoes_Manuais">
+          <ScalarProperty Name="Geracao" ColumnName="Geracao" />
+          <ScalarProperty Name="Consumo" ColumnName="Consumo" />
+          <ScalarProperty Name="Periodo" ColumnName="Periodo" />
+          <ScalarProperty Name="Ponto" ColumnName="Ponto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EIGMedicao_View_Agente">
+      <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_View_Agente">
+        <MappingFragment StoreEntitySet="EIGMedicao_View_Agente">
+          <ScalarProperty Name="Fator_Perda" ColumnName="Fator_Perda" />
+          <ScalarProperty Name="Agente" ColumnName="Agente" />
+          <ScalarProperty Name="Unidade" ColumnName="Unidade" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="SG_AGEN_SCDD" ColumnName="SG_AGEN_SCDD" />
+          <ScalarProperty Name="CD_AGEN_SCDD" ColumnName="CD_AGEN_SCDD" />
+          <ScalarProperty Name="ID_Cadastro" ColumnName="ID_Cadastro" />
+          <ScalarProperty Name="ID_Unidade" ColumnName="ID_Unidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EIGMedicao_MedicaoClientes">
+      <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_MedicaoClientes">
+        <MappingFragment StoreEntitySet="EIGMedicao_MedicaoClientes">
+          <ScalarProperty Name="CD_AGEN_SCDD" ColumnName="CD_AGEN_SCDD" />
+          <ScalarProperty Name="SiglaAgente" ColumnName="SiglaAgente" />
+          <ScalarProperty Name="PossuiProjecao" ColumnName="PossuiProjecao" />
+          <ScalarProperty Name="HorasFaltantes" ColumnName="HorasFaltantes" />
+          <ScalarProperty Name="MWh" ColumnName="MWh" />
+          <ScalarProperty Name="Fim" ColumnName="Fim" />
+          <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+          <ScalarProperty Name="ID_Cadastro" ColumnName="ID_Cadastro" />
+          <ScalarProperty Name="ID_Unidade" ColumnName="ID_Unidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EIGMedicao_View_Contratos3">
+      <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_View_Contratos3">
+        <MappingFragment StoreEntitySet="EIGMedicao_View_Contratos3">
+          <ScalarProperty Name="MONTANTE" ColumnName="MONTANTE" />
+          <ScalarProperty Name="MONTANTE_EXERCIDO" ColumnName="MONTANTE_EXERCIDO" />
+          <ScalarProperty Name="FLEX_MAX_CONTRATADO" ColumnName="FLEX_MAX_CONTRATADO" />
+          <ScalarProperty Name="FLEX_MIN_CONTRATADO" ColumnName="FLEX_MIN_CONTRATADO" />
+          <ScalarProperty Name="MONTANTE_CONTRATADO" ColumnName="MONTANTE_CONTRATADO" />
+          <ScalarProperty Name="FIM" ColumnName="FIM" />
+          <ScalarProperty Name="INICIO" ColumnName="INICIO" />
+          <ScalarProperty Name="IDENTIFICACAO_UNIDADE" ColumnName="IDENTIFICACAO_UNIDADE" />
+          <ScalarProperty Name="ID_UNIDADE" ColumnName="ID_UNIDADE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EIG_Particionamento_ContratosEnergia">
+      <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIG_Particionamento_ContratosEnergia">
+        <MappingFragment StoreEntitySet="EIG_Particionamento_ContratosEnergia">
+          <ScalarProperty Name="Particionamento_Automatico" ColumnName="Particionamento_Automatico" />
+          <ScalarProperty Name="Montante_Exercido" ColumnName="Montante_Exercido" />
+          <ScalarProperty Name="Representatividade_MWh" ColumnName="Representatividade_MWh" />
+          <ScalarProperty Name="Representatividade_Porcentagem" ColumnName="Representatividade_Porcentagem" />
+          <ScalarProperty Name="Ponta" ColumnName="Ponta" />
+          <ScalarProperty Name="Fim" ColumnName="Fim" />
+          <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+          <ScalarProperty Name="Identificador" ColumnName="Identificador" />
+          <ScalarProperty Name="ID_Unidade" ColumnName="ID_Unidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EIGMedicao_View_Contratos4">
+      <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_View_Contratos4">
+        <MappingFragment StoreEntitySet="EIGMedicao_View_Contratos4">
+          <ScalarProperty Name="MONTANTE_EXERCIDO" ColumnName="MONTANTE_EXERCIDO" />
+          <ScalarProperty Name="Prioridade_Proinfa" ColumnName="Prioridade_Proinfa" />
+          <ScalarProperty Name="Proinfa" ColumnName="Proinfa" />
+          <ScalarProperty Name="Flex_Tipo" ColumnName="Flex_Tipo" />
+          <ScalarProperty Name="Flex_Max" ColumnName="Flex_Max" />
+          <ScalarProperty Name="Flex_Min" ColumnName="Flex_Min" />
+          <ScalarProperty Name="HORAS" ColumnName="HORAS" />
+          <ScalarProperty Name="Particionamento_Automatico" ColumnName="Particionamento_Automatico" />
+          <ScalarProperty Name="REPRESENTATIVIDADE_PORCENTAGEM" ColumnName="REPRESENTATIVIDADE_PORCENTAGEM" />
+          <ScalarProperty Name="REPRESENTATIVIDADE_MWH" ColumnName="REPRESENTATIVIDADE_MWH" />
+          <ScalarProperty Name="MONTANTE" ColumnName="MONTANTE" />
+          <ScalarProperty Name="PONTA" ColumnName="PONTA" />
+          <ScalarProperty Name="FIM" ColumnName="FIM" />
+          <ScalarProperty Name="INICIO" ColumnName="INICIO" />
+          <ScalarProperty Name="IDENTIFICACAO_UNIDADE" ColumnName="IDENTIFICACAO_UNIDADE" />
+          <ScalarProperty Name="Identificador" ColumnName="Identificador" />
+          <ScalarProperty Name="ID_UNIDADE" ColumnName="ID_UNIDADE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EIGMedicao_View_Particionamento">
+      <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_View_Particionamento">
+        <MappingFragment StoreEntitySet="EIGMedicao_View_Particionamento">
+          <ScalarProperty Name="MONTANTE_EXERCIDO" ColumnName="MONTANTE_EXERCIDO" />
+          <ScalarProperty Name="Prioridade_Proinfa" ColumnName="Prioridade_Proinfa" />
+          <ScalarProperty Name="Proinfa" ColumnName="Proinfa" />
+          <ScalarProperty Name="Flex_Tipo" ColumnName="Flex_Tipo" />
+          <ScalarProperty Name="Flex_Max" ColumnName="Flex_Max" />
+          <ScalarProperty Name="Flex_Min" ColumnName="Flex_Min" />
+          <ScalarProperty Name="HORAS" ColumnName="HORAS" />
+          <ScalarProperty Name="Particionamento_Automatico" ColumnName="Particionamento_Automatico" />
+          <ScalarProperty Name="REPRESENTATIVIDADE_PORCENTAGEM" ColumnName="REPRESENTATIVIDADE_PORCENTAGEM" />
+          <ScalarProperty Name="REPRESENTATIVIDADE_MWH" ColumnName="REPRESENTATIVIDADE_MWH" />
+          <ScalarProperty Name="MONTANTE" ColumnName="MONTANTE" />
+          <ScalarProperty Name="PONTA" ColumnName="PONTA" />
+          <ScalarProperty Name="FIM" ColumnName="FIM" />
+          <ScalarProperty Name="INICIO" ColumnName="INICIO" />
+          <ScalarProperty Name="IDENTIFICACAO_UNIDADE" ColumnName="IDENTIFICACAO_UNIDADE" />
+          <ScalarProperty Name="Identificador" ColumnName="Identificador" />
+          <ScalarProperty Name="ID_UNIDADE" ColumnName="ID_UNIDADE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EIGMedicao_Import_Stage2">
+      <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_Import_Stage2">
+        <MappingFragment StoreEntitySet="EIGMedicao_Import_Stage2">
+          <ScalarProperty Name="Origem" ColumnName="Origem" />
+          <ScalarProperty Name="Qualidade" ColumnName="Qualidade" />
+          <ScalarProperty Name="Energia_Ativa_De_Geração" ColumnName="Energia_Ativa_De_Geração" />
+          <ScalarProperty Name="Energia_Ativa_De_Consumo" ColumnName="Energia_Ativa_De_Consumo" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Ponto___Grupo" ColumnName="Ponto   Grupo" />
+          <ScalarProperty Name="Agente" ColumnName="Agente" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

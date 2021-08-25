@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EigMedicoes.Modelo", "EigMedicoes.Modelo\EigMedicoes.Modelo.csproj", "{4FC9C6FF-8D84-4CFD-B4DB-8CB0F68E89B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EigMedicoes.Win", "EigMedicoes.Win\EigMedicoes.Win.csproj", "{3523EA76-DA67-45C0-98DC-07F6F9AE64CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EigMedicoes.Excel", "EigMedicoes.Excel\EigMedicoes.Excel.csproj", "{01B0597B-A0A8-417D-99C7-DDD7F1F77A48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FC9C6FF-8D84-4CFD-B4DB-8CB0F68E89B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC9C6FF-8D84-4CFD-B4DB-8CB0F68E89B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FC9C6FF-8D84-4CFD-B4DB-8CB0F68E89B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC9C6FF-8D84-4CFD-B4DB-8CB0F68E89B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3523EA76-DA67-45C0-98DC-07F6F9AE64CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3523EA76-DA67-45C0-98DC-07F6F9AE64CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3523EA76-DA67-45C0-98DC-07F6F9AE64CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3523EA76-DA67-45C0-98DC-07F6F9AE64CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01B0597B-A0A8-417D-99C7-DDD7F1F77A48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B0597B-A0A8-417D-99C7-DDD7F1F77A48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B0597B-A0A8-417D-99C7-DDD7F1F77A48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B0597B-A0A8-417D-99C7-DDD7F1F77A48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

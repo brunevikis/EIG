@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EIG_MEDIDORModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="EIG_Particionamento_ContratosEnergia">
+          <Key>
+            <PropertyRef Name="ID_Unidade" />
+            <PropertyRef Name="Identificador" />
+            <PropertyRef Name="Inicio" />
+            <PropertyRef Name="Fim" />
+          </Key>
+          <Property Name="ID_Unidade" Type="int" Nullable="false" />
+          <Property Name="Identificador" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Inicio" Type="datetime" Nullable="false" />
+          <Property Name="Fim" Type="datetime" Nullable="false" />
+          <Property Name="Ponta" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Representatividade_Porcentagem" Type="decimal" Precision="18" Scale="15" />
+          <Property Name="Representatividade_MWh" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Montante_Exercido" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Particionamento_Automatico" Type="int" />
+        </EntityType>
+        <EntityType Name="EIGMedicao_MedicaoClientes">
+          <Key>
+            <PropertyRef Name="ID_Unidade" />
+            <PropertyRef Name="Inicio" />
+          </Key>
+          <Property Name="ID_Unidade" Type="int" Nullable="false" />
+          <Property Name="ID_Cadastro" Type="int" Nullable="false" />
+          <Property Name="Inicio" Type="datetime" Nullable="false" />
+          <Property Name="Fim" Type="datetime" Nullable="false" />
+          <Property Name="MWh" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="HorasFaltantes" Type="int" Nullable="false" />
+          <Property Name="PossuiProjecao" Type="bit" Nullable="false" />
+          <Property Name="SiglaAgente" Type="varchar" MaxLength="150" />
+          <Property Name="CD_AGEN_SCDD" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="EIGMedicao_Medicoes_Manuais">
+          <Key>
+            <PropertyRef Name="Ponto" />
+            <PropertyRef Name="Periodo" />
+          </Key>
+          <Property Name="Ponto" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Periodo" Type="smalldatetime" Nullable="false" />
+          <Property Name="Consumo" Type="decimal" Precision="12" Scale="3" Nullable="false" />
+          <Property Name="Geracao" Type="decimal" Precision="12" Scale="3" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'EIG.dbo.EIGMedicao_View_Agente' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EIGMedicao_View_Agente">
+          <Key>
+            <PropertyRef Name="ID_Unidade" />
+            <PropertyRef Name="Unidade" />
+            <PropertyRef Name="ID_Cadastro" />
+          </Key>
+          <Property Name="ID_Unidade" Type="int" Nullable="false" />
+          <Property Name="Unidade" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ID_Cadastro" Type="int" Nullable="false" />
+          <Property Name="CD_AGEN_SCDD" Type="int" />
+          <Property Name="SG_AGEN_SCDD" Type="varchar" MaxLength="255" />
+          <Property Name="Agente" Type="varchar" MaxLength="255" />
+          <Property Name="Tipo" Type="varchar" MaxLength="1" />
+          <Property Name="Fator_Perda" Type="decimal" Precision="19" Scale="8" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'EIG.dbo.EIGMedicao_View_Cadastro' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EIGMedicao_View_Cadastro">
+          <Key>
+            <PropertyRef Name="Codigo de Cadastro" />
+          </Key>
+          <Property Name="Codigo de Cadastro" Type="int" Nullable="false" />
+          <Property Name="Grupo" Type="varchar" MaxLength="255" />
+          <Property Name="Nome" Type="varchar" MaxLength="255" />
+          <Property Name="Tipo" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'EIG.dbo.EIGMedicao_View_Contratos3' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EIGMedicao_View_Contratos3">
+          <Key>
+            <PropertyRef Name="IDENTIFICACAO_UNIDADE" />
+            <PropertyRef Name="INICIO" />
+            <PropertyRef Name="FIM" />
+          </Key>
+          <Property Name="ID_UNIDADE" Type="int" />
+          <Property Name="IDENTIFICACAO_UNIDADE" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="INICIO" Type="datetime" Nullable="false" />
+          <Property Name="FIM" Type="datetime" Nullable="false" />
+          <Property Name="MONTANTE_CONTRATADO" Type="decimal" Precision="38" Scale="6" />
+          <Property Name="FLEX_MIN_CONTRATADO" Type="decimal" Precision="38" Scale="6" />
+          <Property Name="FLEX_MAX_CONTRATADO" Type="decimal" Precision="38" Scale="6" />
+          <Property Name="MONTANTE_EXERCIDO" Type="decimal" Precision="38" Scale="6" />
+          <Property Name="MONTANTE" Type="decimal" Precision="38" Scale="6" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'EIG.dbo.EIGMedicao_View_Contratos4' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EIGMedicao_View_Contratos4">
+          <Key>
+            <PropertyRef Name="Identificador" />
+            <PropertyRef Name="IDENTIFICACAO_UNIDADE" />
+            <PropertyRef Name="INICIO" />
+            <PropertyRef Name="FIM" />
+            <PropertyRef Name="Flex_Min" />
+            <PropertyRef Name="Flex_Max" />
+            <PropertyRef Name="Proinfa" />
+            <PropertyRef Name="Prioridade_Proinfa" />
+          </Key>
+          <Property Name="ID_UNIDADE" Type="int" />
+          <Property Name="Identificador" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="IDENTIFICACAO_UNIDADE" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="INICIO" Type="datetime" Nullable="false" />
+          <Property Name="FIM" Type="datetime" Nullable="false" />
+          <Property Name="PONTA" Type="varchar" MaxLength="50" />
+          <Property Name="MONTANTE" Type="decimal" Precision="29" Scale="6" />
+          <Property Name="REPRESENTATIVIDADE_MWH" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="REPRESENTATIVIDADE_PORCENTAGEM" Type="decimal" Precision="18" Scale="15" />
+          <Property Name="Particionamento_Automatico" Type="int" />
+          <Property Name="HORAS" Type="int" />
+          <Property Name="Flex_Min" Type="decimal" Precision="18" Scale="8" Nullable="false" />
+          <Property Name="Flex_Max" Type="decimal" Precision="18" Scale="8" Nullable="false" />
+          <Property Name="Flex_Tipo" Type="int" />
+          <Property Name="Proinfa" Type="bit" Nullable="false" />
+          <Property Name="Prioridade_Proinfa" Type="bit" Nullable="false" />
+          <Property Name="MONTANTE_EXERCIDO" Type="decimal" Precision="29" Scale="6" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'EIG.dbo.EIGMedicao_View_Medicoes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EIGMedicao_View_Medicoes">
+          <Key>
+            <PropertyRef Name="Ponto" />
+            <PropertyRef Name="Periodo" />
+            <PropertyRef Name="Consumo" />
+            <PropertyRef Name="Geracao" />
+            <PropertyRef Name="Consistido" />
+            <PropertyRef Name="Manual" />
+          </Key>
+          <Property Name="Ponto" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Periodo" Type="smalldatetime" Nullable="false" />
+          <Property Name="Consumo" Type="decimal" Precision="12" Scale="3" Nullable="false" />
+          <Property Name="Geracao" Type="decimal" Precision="12" Scale="3" Nullable="false" />
+          <Property Name="Consistido" Type="bit" Nullable="false" />
+          <Property Name="Manual" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'EIG.dbo.EIGMedicao_View_Particionamento' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EIGMedicao_View_Particionamento">
+          <Key>
+            <PropertyRef Name="Identificador" />
+            <PropertyRef Name="IDENTIFICACAO_UNIDADE" />
+            <PropertyRef Name="INICIO" />
+            <PropertyRef Name="FIM" />
+            <PropertyRef Name="MONTANTE" />
+            <PropertyRef Name="Flex_Min" />
+            <PropertyRef Name="Flex_Max" />
+            <PropertyRef Name="Proinfa" />
+            <PropertyRef Name="Prioridade_Proinfa" />
+          </Key>
+          <Property Name="ID_UNIDADE" Type="int" />
+          <Property Name="Identificador" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="IDENTIFICACAO_UNIDADE" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="INICIO" Type="datetime" Nullable="false" />
+          <Property Name="FIM" Type="datetime" Nullable="false" />
+          <Property Name="PONTA" Type="varchar" MaxLength="50" />
+          <Property Name="MONTANTE" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+          <Property Name="REPRESENTATIVIDADE_MWH" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="REPRESENTATIVIDADE_PORCENTAGEM" Type="decimal" Precision="18" Scale="15" />
+          <Property Name="Particionamento_Automatico" Type="int" />
+          <Property Name="HORAS" Type="int" />
+          <Property Name="Flex_Min" Type="decimal" Precision="18" Scale="8" Nullable="false" />
+          <Property Name="Flex_Max" Type="decimal" Precision="18" Scale="8" Nullable="false" />
+          <Property Name="Flex_Tipo" Type="int" />
+          <Property Name="Proinfa" Type="bit" Nullable="false" />
+          <Property Name="Prioridade_Proinfa" Type="bit" Nullable="false" />
+          <Property Name="MONTANTE_EXERCIDO" Type="decimal" Precision="18" Scale="6" />
+        </EntityType>
+        <Function Name="EIGMedicao_IMPORTAR_ARQUIVO_PARA_STAGE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Arquivo" Type="nvarchar" Mode="In" />
+          <Parameter Name="RowCount" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="EIGMedicao_IMPORTAR_ARQUIVO2_PARA_STAGE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Arquivo" Type="nvarchar" Mode="In" />
+          <Parameter Name="RowCount" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="EIGMedicao_PROCESSAR_DADOS_IMPORTADOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RowCount" Type="int" Mode="InOut" />
+          <Parameter Name="FaltantesCount" Type="int" Mode="InOut" />
+        </Function>
+        <EntityContainer Name="EIG_MEDIDORModelStoreContainer">
+          <EntitySet Name="EIG_Particionamento_ContratosEnergia" EntityType="Self.EIG_Particionamento_ContratosEnergia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EIGMedicao_MedicaoClientes" EntityType="Self.EIGMedicao_MedicaoClientes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EIGMedicao_Medicoes_Manuais" EntityType="Self.EIGMedicao_Medicoes_Manuais" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EIGMedicao_View_Agente" EntityType="Self.EIGMedicao_View_Agente" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[EIGMedicao_View_Agente].[ID_Unidade] AS [ID_Unidade], 
+[EIGMedicao_View_Agente].[Unidade] AS [Unidade], 
+[EIGMedicao_View_Agente].[ID_Cadastro] AS [ID_Cadastro], 
+[EIGMedicao_View_Agente].[CD_AGEN_SCDD] AS [CD_AGEN_SCDD], 
+[EIGMedicao_View_Agente].[SG_AGEN_SCDD] AS [SG_AGEN_SCDD], 
+[EIGMedicao_View_Agente].[Agente] AS [Agente], 
+[EIGMedicao_View_Agente].[Tipo] AS [Tipo], 
+[EIGMedicao_View_Agente].[Fator_Perda] AS [Fator_Perda]
+FROM [dbo].[EIGMedicao_View_Agente] AS [EIGMedicao_View_Agente]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EIGMedicao_View_Cadastro" EntityType="Self.EIGMedicao_View_Cadastro" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[EIGMedicao_View_Cadastro].[Codigo de Cadastro] AS [Codigo de Cadastro], 
+[EIGMedicao_View_Cadastro].[Grupo] AS [Grupo], 
+[EIGMedicao_View_Cadastro].[Nome] AS [Nome], 
+[EIGMedicao_View_Cadastro].[Tipo] AS [Tipo]
+FROM [dbo].[EIGMedicao_View_Cadastro] AS [EIGMedicao_View_Cadastro]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EIGMedicao_View_Contratos3" EntityType="Self.EIGMedicao_View_Contratos3" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[EIGMedicao_View_Contratos3].[ID_UNIDADE] AS [ID_UNIDADE], 
+[EIGMedicao_View_Contratos3].[IDENTIFICACAO_UNIDADE] AS [IDENTIFICACAO_UNIDADE], 
+[EIGMedicao_View_Contratos3].[INICIO] AS [INICIO], 
+[EIGMedicao_View_Contratos3].[FIM] AS [FIM], 
+[EIGMedicao_View_Contratos3].[MONTANTE_CONTRATADO] AS [MONTANTE_CONTRATADO], 
+[EIGMedicao_View_Contratos3].[FLEX_MIN_CONTRATADO] AS [FLEX_MIN_CONTRATADO], 
+[EIGMedicao_View_Contratos3].[FLEX_MAX_CONTRATADO] AS [FLEX_MAX_CONTRATADO], 
+[EIGMedicao_View_Contratos3].[MONTANTE_EXERCIDO] AS [MONTANTE_EXERCIDO], 
+[EIGMedicao_View_Contratos3].[MONTANTE] AS [MONTANTE]
+FROM [dbo].[EIGMedicao_View_Contratos3] AS [EIGMedicao_View_Contratos3]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EIGMedicao_View_Contratos4" EntityType="Self.EIGMedicao_View_Contratos4" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[EIGMedicao_View_Contratos4].[ID_UNIDADE] AS [ID_UNIDADE], 
+[EIGMedicao_View_Contratos4].[Identificador] AS [Identificador], 
+[EIGMedicao_View_Contratos4].[IDENTIFICACAO_UNIDADE] AS [IDENTIFICACAO_UNIDADE], 
+[EIGMedicao_View_Contratos4].[INICIO] AS [INICIO], 
+[EIGMedicao_View_Contratos4].[FIM] AS [FIM], 
+[EIGMedicao_View_Contratos4].[PONTA] AS [PONTA], 
+[EIGMedicao_View_Contratos4].[MONTANTE] AS [MONTANTE], 
+[EIGMedicao_View_Contratos4].[REPRESENTATIVIDADE_MWH] AS [REPRESENTATIVIDADE_MWH], 
+[EIGMedicao_View_Contratos4].[REPRESENTATIVIDADE_PORCENTAGEM] AS [REPRESENTATIVIDADE_PORCENTAGEM], 
+[EIGMedicao_View_Contratos4].[Particionamento_Automatico] AS [Particionamento_Automatico], 
+[EIGMedicao_View_Contratos4].[HORAS] AS [HORAS], 
+[EIGMedicao_View_Contratos4].[Flex_Min] AS [Flex_Min], 
+[EIGMedicao_View_Contratos4].[Flex_Max] AS [Flex_Max], 
+[EIGMedicao_View_Contratos4].[Flex_Tipo] AS [Flex_Tipo], 
+[EIGMedicao_View_Contratos4].[Proinfa] AS [Proinfa], 
+[EIGMedicao_View_Contratos4].[Prioridade_Proinfa] AS [Prioridade_Proinfa], 
+[EIGMedicao_View_Contratos4].[MONTANTE_EXERCIDO] AS [MONTANTE_EXERCIDO]
+FROM [dbo].[EIGMedicao_View_Contratos4] AS [EIGMedicao_View_Contratos4]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EIGMedicao_View_Medicoes" EntityType="Self.EIGMedicao_View_Medicoes" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[EIGMedicao_View_Medicoes].[Ponto] AS [Ponto], 
+[EIGMedicao_View_Medicoes].[Periodo] AS [Periodo], 
+[EIGMedicao_View_Medicoes].[Consumo] AS [Consumo], 
+[EIGMedicao_View_Medicoes].[Geracao] AS [Geracao], 
+[EIGMedicao_View_Medicoes].[Consistido] AS [Consistido], 
+[EIGMedicao_View_Medicoes].[Manual] AS [Manual]
+FROM [dbo].[EIGMedicao_View_Medicoes] AS [EIGMedicao_View_Medicoes]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EIGMedicao_View_Particionamento" EntityType="Self.EIGMedicao_View_Particionamento" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[EIGMedicao_View_Particionamento].[ID_UNIDADE] AS [ID_UNIDADE], 
+[EIGMedicao_View_Particionamento].[Identificador] AS [Identificador], 
+[EIGMedicao_View_Particionamento].[IDENTIFICACAO_UNIDADE] AS [IDENTIFICACAO_UNIDADE], 
+[EIGMedicao_View_Particionamento].[INICIO] AS [INICIO], 
+[EIGMedicao_View_Particionamento].[FIM] AS [FIM], 
+[EIGMedicao_View_Particionamento].[PONTA] AS [PONTA], 
+[EIGMedicao_View_Particionamento].[MONTANTE] AS [MONTANTE], 
+[EIGMedicao_View_Particionamento].[REPRESENTATIVIDADE_MWH] AS [REPRESENTATIVIDADE_MWH], 
+[EIGMedicao_View_Particionamento].[REPRESENTATIVIDADE_PORCENTAGEM] AS [REPRESENTATIVIDADE_PORCENTAGEM], 
+[EIGMedicao_View_Particionamento].[Particionamento_Automatico] AS [Particionamento_Automatico], 
+[EIGMedicao_View_Particionamento].[HORAS] AS [HORAS], 
+[EIGMedicao_View_Particionamento].[Flex_Min] AS [Flex_Min], 
+[EIGMedicao_View_Particionamento].[Flex_Max] AS [Flex_Max], 
+[EIGMedicao_View_Particionamento].[Flex_Tipo] AS [Flex_Tipo], 
+[EIGMedicao_View_Particionamento].[Proinfa] AS [Proinfa], 
+[EIGMedicao_View_Particionamento].[Prioridade_Proinfa] AS [Prioridade_Proinfa], 
+[EIGMedicao_View_Particionamento].[MONTANTE_EXERCIDO] AS [MONTANTE_EXERCIDO]
+FROM [dbo].[EIGMedicao_View_Particionamento] AS [EIGMedicao_View_Particionamento]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EIG_MEDIDORModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EIG_MEDIDOREntities" p1:LazyLoadingEnabled="true">
+          <FunctionImport Name="EIGMedicao_IMPORTAR_ARQUIVO_PARA_STAGE">
+            <Parameter Name="Arquivo" Mode="In" Type="String" />
+            <Parameter Name="RowCount" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="EIGMedicao_PROCESSAR_DADOS_IMPORTADOS">
+            <Parameter Name="RowCount" Mode="InOut" Type="Int32" />
+            <Parameter Name="FaltantesCount" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="EIGMedicao_View_Cadastro" EntityType="EIG_MEDIDORModel.EIGMedicao_View_Cadastro" />
+          <EntitySet Name="EIGMedicao_View_Medicoes" EntityType="EIG_MEDIDORModel.EIGMedicao_View_Medicoes" />
+          <FunctionImport Name="EIGMedicao_IMPORTAR_ARQUIVO2_PARA_STAGE">
+            <Parameter Name="Arquivo" Mode="In" Type="String" />
+            <Parameter Name="RowCount" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="EIGMedicao_Medicoes_Manuais" EntityType="EIG_MEDIDORModel.EIGMedicao_Medicoes_Manuais" />
+          <EntitySet Name="EIGMedicao_View_Agente" EntityType="EIG_MEDIDORModel.EIGMedicao_View_Agente" />
+          <EntitySet Name="EIGMedicao_MedicaoClientes" EntityType="EIG_MEDIDORModel.EIGMedicao_MedicaoClientes" />
+          <EntitySet Name="EIGMedicao_View_Contratos3" EntityType="EIG_MEDIDORModel.EIGMedicao_View_Contratos3" />
+          <EntitySet Name="EIG_Particionamento_ContratosEnergia" EntityType="EIG_MEDIDORModel.EIG_Particionamento_ContratosEnergia" />
+          <EntitySet Name="EIGMedicao_View_Contratos4" EntityType="EIG_MEDIDORModel.EIGMedicao_View_Contratos4" />
+          <EntitySet Name="EIGMedicao_View_Particionamento" EntityType="EIG_MEDIDORModel.EIGMedicao_View_Particionamento" />
+        </EntityContainer>
+        <EntityType Name="EIGMedicao_View_Cadastro">
+          <Key>
+            <PropertyRef Name="Codigo_de_Cadastro" />
+          </Key>
+          <Property Type="Int32" Name="Codigo_de_Cadastro" Nullable="false" />
+          <Property Type="String" Name="Grupo" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Nome" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Tipo" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EIGMedicao_View_Medicoes">
+          <Key>
+            <PropertyRef Name="Ponto" />
+            <PropertyRef Name="Periodo" />
+            <PropertyRef Name="Consumo" />
+            <PropertyRef Name="Geracao" />
+            <PropertyRef Name="Consistido" />
+            <PropertyRef Name="Manual" />
+          </Key>
+          <Property Type="String" Name="Ponto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Periodo" Nullable="false" Precision="0" />
+          <Property Type="Decimal" Name="Consumo" Nullable="false" Precision="12" Scale="3" />
+          <Property Type="Decimal" Name="Geracao" Nullable="false" Precision="12" Scale="3" />
+          <Property Type="Boolean" Name="Consistido" Nullable="false" />
+          <Property Type="Boolean" Name="Manual" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EIGMedicao_Medicoes_Manuais">
+          <Key>
+            <PropertyRef Name="Ponto" />
+            <PropertyRef Name="Periodo" />
+          </Key>
+          <Property Type="String" Name="Ponto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Periodo" Nullable="false" Precision="0" />
+          <Property Type="Decimal" Name="Consumo" Nullable="false" Precision="12" Scale="3" />
+          <Property Type="Decimal" Name="Geracao" Nullable="false" Precision="12" Scale="3" />
+        </EntityType>
+        <EntityType Name="EIGMedicao_View_Agente">
+          <Key>
+            <PropertyRef Name="ID_Unidade" />
+            <PropertyRef Name="ID_Cadastro" />
+            <PropertyRef Name="Unidade" />
+          </Key>
+          <Property Type="Int32" Name="ID_Unidade" Nullable="false" />
+          <Property Type="Int32" Name="ID_Cadastro" Nullable="false" />
+          <Property Type="Int32" Name="CD_AGEN_SCDD" />
+          <Property Type="String" Name="SG_AGEN_SCDD" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Tipo" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Unidade" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Agente" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Fator_Perda" Precision="19" Scale="8" />
+        </EntityType>
+        <EntityType Name="EIGMedicao_MedicaoClientes">
+          <Key>
+            <PropertyRef Name="ID_Unidade" />
+            <PropertyRef Name="Inicio" />
+          </Key>
+          <Property Type="Int32" Name="ID_Unidade" Nullable="false" />
+          <Property Type="Int32" Name="ID_Cadastro" Nullable="false" />
+          <Property Type="DateTime" Name="Inicio" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="Fim" Nullable="false" Precision="3" />
+          <Property Type="Decimal" Name="MWh" Precision="18" Scale="8" />
+          <Property Type="Int32" Name="HorasFaltantes" Nullable="false" />
+          <Property Type="Boolean" Name="PossuiProjecao" Nullable="false" />
+          <Property Type="String" Name="SiglaAgente" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CD_AGEN_SCDD" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EIGMedicao_View_Contratos3">
+          <Key>
+            <PropertyRef Name="IDENTIFICACAO_UNIDADE" />
+            <PropertyRef Name="INICIO" />
+            <PropertyRef Name="FIM" />
+          </Key>
+          <Property Type="Int32" Name="ID_UNIDADE" />
+          <Property Type="String" Name="IDENTIFICACAO_UNIDADE" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="INICIO" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="FIM" Nullable="false" Precision="3" />
+          <Property Type="Decimal" Name="MONTANTE_CONTRATADO" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="FLEX_MIN_CONTRATADO" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="FLEX_MAX_CONTRATADO" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="MONTANTE_EXERCIDO" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="MONTANTE" Precision="38" Scale="6" />
+        </EntityType>
+        <EntityType Name="EIG_Particionamento_ContratosEnergia">
+          <Key>
+            <PropertyRef Name="ID_Unidade" />
+            <PropertyRef Name="Identificador" />
+            <PropertyRef Name="Inicio" />
+            <PropertyRef Name="Fim" />
+          </Key>
+          <Property Name="ID_Unidade" Type="Int32" Nullable="false" />
+          <Property Name="Identificador" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Inicio" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Fim" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Ponta" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Representatividade_Porcentagem" Type="Decimal" Precision="18" Scale="15" />
+          <Property Name="Representatividade_MWh" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Montante_Exercido" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Particionamento_Automatico" Type="Int32" />
+        </EntityType>
+        <EntityType Name="EIGMedicao_View_Contratos4">
+          <Key>
+            <PropertyRef Name="Identificador" />
+            <PropertyRef Name="IDENTIFICACAO_UNIDADE" />
+            <PropertyRef Name="INICIO" />
+            <PropertyRef Name="FIM" />
+            <PropertyRef Name="Flex_Min" />
+            <PropertyRef Name="Flex_Max" />
+            <PropertyRef Name="Proinfa" />
+            <PropertyRef Name="Prioridade_Proinfa" />
+          </Key>
+          <Property Name="ID_UNIDADE" Type="Int32" />
+          <Property Name="Identificador" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="IDENTIFICACAO_UNIDADE" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="INICIO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FIM" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PONTA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MONTANTE" Type="Decimal" Precision="29" Scale="6" />
+          <Property Name="REPRESENTATIVIDADE_MWH" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="REPRESENTATIVIDADE_PORCENTAGEM" Type="Decimal" Precision="18" Scale="15" />
+          <Property Name="Particionamento_Automatico" Type="Int32" />
+          <Property Name="HORAS" Type="Int32" />
+          <Property Name="Flex_Min" Type="Decimal" Nullable="false" Precision="18" Scale="8" />
+          <Property Name="Flex_Max" Type="Decimal" Nullable="false" Precision="18" Scale="8" />
+          <Property Name="Flex_Tipo" Type="Int32" />
+          <Property Name="Proinfa" Type="Boolean" Nullable="false" />
+          <Property Name="Prioridade_Proinfa" Type="Boolean" Nullable="false" />
+          <Property Name="MONTANTE_EXERCIDO" Type="Decimal" Precision="29" Scale="6" />
+        </EntityType>
+        <EntityType Name="EIGMedicao_View_Particionamento">
+          <Key>
+            <PropertyRef Name="Identificador" />
+            <PropertyRef Name="IDENTIFICACAO_UNIDADE" />
+            <PropertyRef Name="INICIO" />
+            <PropertyRef Name="FIM" />
+            <PropertyRef Name="MONTANTE" />
+            <PropertyRef Name="Flex_Min" />
+            <PropertyRef Name="Flex_Max" />
+            <PropertyRef Name="Proinfa" />
+            <PropertyRef Name="Prioridade_Proinfa" />
+          </Key>
+          <Property Name="ID_UNIDADE" Type="Int32" />
+          <Property Name="Identificador" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="IDENTIFICACAO_UNIDADE" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="INICIO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FIM" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PONTA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MONTANTE" Type="Decimal" Nullable="false" Precision="18" Scale="6" />
+          <Property Name="REPRESENTATIVIDADE_MWH" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="REPRESENTATIVIDADE_PORCENTAGEM" Type="Decimal" Precision="18" Scale="15" />
+          <Property Name="Particionamento_Automatico" Type="Int32" />
+          <Property Name="HORAS" Type="Int32" />
+          <Property Name="Flex_Min" Type="Decimal" Nullable="false" Precision="18" Scale="8" />
+          <Property Name="Flex_Max" Type="Decimal" Nullable="false" Precision="18" Scale="8" />
+          <Property Name="Flex_Tipo" Type="Int32" />
+          <Property Name="Proinfa" Type="Boolean" Nullable="false" />
+          <Property Name="Prioridade_Proinfa" Type="Boolean" Nullable="false" />
+          <Property Name="MONTANTE_EXERCIDO" Type="Decimal" Precision="18" Scale="6" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EIG_MEDIDORModelStoreContainer" CdmEntityContainer="EIG_MEDIDOREntities">
+          <FunctionImportMapping FunctionImportName="EIGMedicao_IMPORTAR_ARQUIVO_PARA_STAGE" FunctionName="EIG_MEDIDORModel.Store.EIGMedicao_IMPORTAR_ARQUIVO_PARA_STAGE" />
+          <FunctionImportMapping FunctionImportName="EIGMedicao_PROCESSAR_DADOS_IMPORTADOS" FunctionName="EIG_MEDIDORModel.Store.EIGMedicao_PROCESSAR_DADOS_IMPORTADOS" />
+          <EntitySetMapping Name="EIGMedicao_View_Cadastro">
+            <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_View_Cadastro">
+              <MappingFragment StoreEntitySet="EIGMedicao_View_Cadastro">
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+                <ScalarProperty Name="Codigo_de_Cadastro" ColumnName="Codigo de Cadastro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EIGMedicao_View_Medicoes">
+            <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_View_Medicoes">
+              <MappingFragment StoreEntitySet="EIGMedicao_View_Medicoes">
+                <ScalarProperty Name="Manual" ColumnName="Manual" />
+                <ScalarProperty Name="Consistido" ColumnName="Consistido" />
+                <ScalarProperty Name="Geracao" ColumnName="Geracao" />
+                <ScalarProperty Name="Consumo" ColumnName="Consumo" />
+                <ScalarProperty Name="Periodo" ColumnName="Periodo" />
+                <ScalarProperty Name="Ponto" ColumnName="Ponto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="EIGMedicao_IMPORTAR_ARQUIVO2_PARA_STAGE" FunctionName="EIG_MEDIDORModel.Store.EIGMedicao_IMPORTAR_ARQUIVO2_PARA_STAGE" />
+          <EntitySetMapping Name="EIGMedicao_Medicoes_Manuais">
+            <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_Medicoes_Manuais">
+              <MappingFragment StoreEntitySet="EIGMedicao_Medicoes_Manuais">
+                <ScalarProperty Name="Geracao" ColumnName="Geracao" />
+                <ScalarProperty Name="Consumo" ColumnName="Consumo" />
+                <ScalarProperty Name="Periodo" ColumnName="Periodo" />
+                <ScalarProperty Name="Ponto" ColumnName="Ponto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EIGMedicao_View_Agente">
+            <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_View_Agente">
+              <MappingFragment StoreEntitySet="EIGMedicao_View_Agente">
+                <ScalarProperty Name="Fator_Perda" ColumnName="Fator_Perda" />
+                <ScalarProperty Name="Agente" ColumnName="Agente" />
+                <ScalarProperty Name="Unidade" ColumnName="Unidade" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="SG_AGEN_SCDD" ColumnName="SG_AGEN_SCDD" />
+                <ScalarProperty Name="CD_AGEN_SCDD" ColumnName="CD_AGEN_SCDD" />
+                <ScalarProperty Name="ID_Cadastro" ColumnName="ID_Cadastro" />
+                <ScalarProperty Name="ID_Unidade" ColumnName="ID_Unidade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EIGMedicao_MedicaoClientes">
+            <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_MedicaoClientes">
+              <MappingFragment StoreEntitySet="EIGMedicao_MedicaoClientes">
+                <ScalarProperty Name="CD_AGEN_SCDD" ColumnName="CD_AGEN_SCDD" />
+                <ScalarProperty Name="SiglaAgente" ColumnName="SiglaAgente" />
+                <ScalarProperty Name="PossuiProjecao" ColumnName="PossuiProjecao" />
+                <ScalarProperty Name="HorasFaltantes" ColumnName="HorasFaltantes" />
+                <ScalarProperty Name="MWh" ColumnName="MWh" />
+                <ScalarProperty Name="Fim" ColumnName="Fim" />
+                <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+                <ScalarProperty Name="ID_Cadastro" ColumnName="ID_Cadastro" />
+                <ScalarProperty Name="ID_Unidade" ColumnName="ID_Unidade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EIGMedicao_View_Contratos3">
+            <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_View_Contratos3">
+              <MappingFragment StoreEntitySet="EIGMedicao_View_Contratos3">
+                <ScalarProperty Name="MONTANTE" ColumnName="MONTANTE" />
+                <ScalarProperty Name="MONTANTE_EXERCIDO" ColumnName="MONTANTE_EXERCIDO" />
+                <ScalarProperty Name="FLEX_MAX_CONTRATADO" ColumnName="FLEX_MAX_CONTRATADO" />
+                <ScalarProperty Name="FLEX_MIN_CONTRATADO" ColumnName="FLEX_MIN_CONTRATADO" />
+                <ScalarProperty Name="MONTANTE_CONTRATADO" ColumnName="MONTANTE_CONTRATADO" />
+                <ScalarProperty Name="FIM" ColumnName="FIM" />
+                <ScalarProperty Name="INICIO" ColumnName="INICIO" />
+                <ScalarProperty Name="IDENTIFICACAO_UNIDADE" ColumnName="IDENTIFICACAO_UNIDADE" />
+                <ScalarProperty Name="ID_UNIDADE" ColumnName="ID_UNIDADE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EIG_Particionamento_ContratosEnergia">
+            <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIG_Particionamento_ContratosEnergia">
+              <MappingFragment StoreEntitySet="EIG_Particionamento_ContratosEnergia">
+                <ScalarProperty Name="Particionamento_Automatico" ColumnName="Particionamento_Automatico" />
+                <ScalarProperty Name="Montante_Exercido" ColumnName="Montante_Exercido" />
+                <ScalarProperty Name="Representatividade_MWh" ColumnName="Representatividade_MWh" />
+                <ScalarProperty Name="Representatividade_Porcentagem" ColumnName="Representatividade_Porcentagem" />
+                <ScalarProperty Name="Ponta" ColumnName="Ponta" />
+                <ScalarProperty Name="Fim" ColumnName="Fim" />
+                <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+                <ScalarProperty Name="Identificador" ColumnName="Identificador" />
+                <ScalarProperty Name="ID_Unidade" ColumnName="ID_Unidade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EIGMedicao_View_Contratos4">
+            <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_View_Contratos4">
+              <MappingFragment StoreEntitySet="EIGMedicao_View_Contratos4">
+                <ScalarProperty Name="MONTANTE_EXERCIDO" ColumnName="MONTANTE_EXERCIDO" />
+                <ScalarProperty Name="Prioridade_Proinfa" ColumnName="Prioridade_Proinfa" />
+                <ScalarProperty Name="Proinfa" ColumnName="Proinfa" />
+                <ScalarProperty Name="Flex_Tipo" ColumnName="Flex_Tipo" />
+                <ScalarProperty Name="Flex_Max" ColumnName="Flex_Max" />
+                <ScalarProperty Name="Flex_Min" ColumnName="Flex_Min" />
+                <ScalarProperty Name="HORAS" ColumnName="HORAS" />
+                <ScalarProperty Name="Particionamento_Automatico" ColumnName="Particionamento_Automatico" />
+                <ScalarProperty Name="REPRESENTATIVIDADE_PORCENTAGEM" ColumnName="REPRESENTATIVIDADE_PORCENTAGEM" />
+                <ScalarProperty Name="REPRESENTATIVIDADE_MWH" ColumnName="REPRESENTATIVIDADE_MWH" />
+                <ScalarProperty Name="MONTANTE" ColumnName="MONTANTE" />
+                <ScalarProperty Name="PONTA" ColumnName="PONTA" />
+                <ScalarProperty Name="FIM" ColumnName="FIM" />
+                <ScalarProperty Name="INICIO" ColumnName="INICIO" />
+                <ScalarProperty Name="IDENTIFICACAO_UNIDADE" ColumnName="IDENTIFICACAO_UNIDADE" />
+                <ScalarProperty Name="Identificador" ColumnName="Identificador" />
+                <ScalarProperty Name="ID_UNIDADE" ColumnName="ID_UNIDADE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EIGMedicao_View_Particionamento">
+            <EntityTypeMapping TypeName="EIG_MEDIDORModel.EIGMedicao_View_Particionamento">
+              <MappingFragment StoreEntitySet="EIGMedicao_View_Particionamento">
+                <ScalarProperty Name="MONTANTE_EXERCIDO" ColumnName="MONTANTE_EXERCIDO" />
+                <ScalarProperty Name="Prioridade_Proinfa" ColumnName="Prioridade_Proinfa" />
+                <ScalarProperty Name="Proinfa" ColumnName="Proinfa" />
+                <ScalarProperty Name="Flex_Tipo" ColumnName="Flex_Tipo" />
+                <ScalarProperty Name="Flex_Max" ColumnName="Flex_Max" />
+                <ScalarProperty Name="Flex_Min" ColumnName="Flex_Min" />
+                <ScalarProperty Name="HORAS" ColumnName="HORAS" />
+                <ScalarProperty Name="Particionamento_Automatico" ColumnName="Particionamento_Automatico" />
+                <ScalarProperty Name="REPRESENTATIVIDADE_PORCENTAGEM" ColumnName="REPRESENTATIVIDADE_PORCENTAGEM" />
+                <ScalarProperty Name="REPRESENTATIVIDADE_MWH" ColumnName="REPRESENTATIVIDADE_MWH" />
+                <ScalarProperty Name="MONTANTE" ColumnName="MONTANTE" />
+                <ScalarProperty Name="PONTA" ColumnName="PONTA" />
+                <ScalarProperty Name="FIM" ColumnName="FIM" />
+                <ScalarProperty Name="INICIO" ColumnName="INICIO" />
+                <ScalarProperty Name="IDENTIFICACAO_UNIDADE" ColumnName="IDENTIFICACAO_UNIDADE" />
+                <ScalarProperty Name="Identificador" ColumnName="Identificador" />
+                <ScalarProperty Name="ID_UNIDADE" ColumnName="ID_UNIDADE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

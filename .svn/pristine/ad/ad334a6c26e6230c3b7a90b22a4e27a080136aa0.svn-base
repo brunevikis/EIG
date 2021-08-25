@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<repositories>
+  <repository path="..\EigMedicoes.Console\packages.config" />
+  <repository path="..\EigMedicoes.Modelo\packages.config" />
+  <repository path="..\EigMedicoes.Win\packages.config" />
+</repositories>
